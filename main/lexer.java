@@ -6,7 +6,7 @@ import java.io.*;
 import token.*;
 import fileReader.*;
 
-/*
+/**
  * Class <I>lexer</I> to lexical analysis a <I>C</I> file
  * @author mkch
  * @version 1.0
@@ -153,7 +153,7 @@ public class lexer
 	{
 		return isString(x)||isFloat(x)||isIdentifier(x)||isKeyword(x)||isWhite(x)||isSemicolon(x)||isOpenParen(x)||isCloseParen(x)||isOperator(x);
 	}
-	/*
+	/**
 	 * Constructor of lexer
 	 */
 	public lexer(String file_name) throws IOException
@@ -162,7 +162,7 @@ public class lexer
 		inFile = new fileReader();
 		fileContent = inFile.readFile(file_name);
 	}
-	/*
+	/**
 	 * run lexical analysis
 	 */
 	public boolean run()
@@ -192,7 +192,7 @@ public class lexer
 		}
 		return true;
 	}
-	/*
+	/**
 	 * output .lex file to <I>file_name</I>
 	 */
 	public boolean output(String file_name)
@@ -208,7 +208,7 @@ public class lexer
 			return false;
 		}
 	}
-	/*
+	/**
 	 * output .lex file automatically
 	 */
 	public boolean output()
